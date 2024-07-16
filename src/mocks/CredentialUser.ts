@@ -1,4 +1,6 @@
-{
+import type { CredentialUser } from "@/types/auth";
+
+export const credentialUser : CredentialUser = {
   "user" : [
     {
       "id": 1,
