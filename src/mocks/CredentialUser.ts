@@ -1,4 +1,4 @@
-import type { CredentialUser } from "@/types/auth";
+import type { CredentialUser } from "@/modules/authentication/types/auth";
 
 export const credentialUser : CredentialUser = {
   "user" : [

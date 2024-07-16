@@ -8,7 +8,6 @@
       <span class="text-[#0D0D0D]">
         Сортировка
       </span>
-
       </div>
     </div>
 </template>

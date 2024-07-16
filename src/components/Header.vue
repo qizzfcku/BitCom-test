@@ -1,17 +1,14 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useUserStore } from '@/modules/authentication/store';
-import { useRouter } from 'vue-router';
 
 const userStore = useUserStore();
-const router = useRouter();
 
-const user = computed(() => userStore.userData);
+const user = computed(() => userStore.getUserData);
 const isAuth = computed(() => !!user.value);
 
 const logout = () => {
   userStore.deleteUser();
-  router.push('/login');
 };
 </script>
 
@@ -29,7 +26,7 @@ const logout = () => {
     <div v-else>
       <button @click="logout" class="flex justify-between items-center gap-3 py-2 px-4 border ml-4 rounded-xl hover:shadow-blue-glow" v-if="user">
         {{ user.login }}
-        <img class="h-4" src="/public/exit.png" alt="exit"/>
+        <img class="h-4" src="/icon/exit.png" alt="exit"/>
       </button>
     </div>
   </header>

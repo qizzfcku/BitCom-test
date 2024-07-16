@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import {ref, computed, watch, onMounted} from "vue"
+import {ref, watch} from "vue"
 import { useRouter } from 'vue-router'
 
 import { credentialUser } from '@/mocks/CredentialUser'
-import type { User } from '@/types/auth'
+import type { User } from '@/modules/authentication/types/auth'
 import {useUserStore} from "@/modules/authentication/store";
+
 
 const login = ref('')
 const password = ref('')
@@ -12,12 +13,10 @@ const error = ref(false)
 
 const router = useRouter()
 const userStore = useUserStore()
-const userData = computed(() => userStore.userData)
 
 watch([login, password], () => {
   error.value = false
 })
-
 
 const submitForm = () => {
   const user : User | undefined = credentialUser.user.find(user => user.login === login.value && user.password === password.value);

@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import type {User} from '@/types/auth'
+import type {User} from '@/modules/authentication/types/auth'
 
 interface UserState {
     userData: User | null,
@@ -9,6 +9,10 @@ export const useUserStore = defineStore('auth', {
     state: (): UserState => ({
         userData: null,
     }),
+    getters: {
+        isAuthenticated: (state): boolean => state.userData !== null,
+        getUserData: (state): User | null => state.userData
+    },
     actions: {
         getUser(user: User) {
             this.userData = user;
