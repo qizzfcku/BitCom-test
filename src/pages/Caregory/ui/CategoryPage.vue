@@ -30,7 +30,10 @@ onMounted(() => {
     <div class="basis-5/6 p-20">
       <div v-if="loading">Загрузка...</div>
       <div v-else-if="error">{{ error }}</div>
-      <ProductList v-else :products="products" />
+      <div v-else>
+        <ProductList :products="products" v-if="products.length"/>
+        <div v-else>Список пуст</div>
+      </div>
     </div>
   </div>
 </template>
