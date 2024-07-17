@@ -2,7 +2,7 @@
 import {ref, watch} from "vue"
 import { useRouter } from 'vue-router'
 
-import { credentialUser } from '@/features/Auth/model/CredentialUsers'
+import { credentialUser } from '@/shared/model/CredentialUsers'
 import type { User } from '@/entities/user/model/auth'
 import {useUserStore} from "@/entities/user/model/store";
 

@@ -14,10 +14,12 @@ const isAuth = computed(() => !!userStore.getUserData);
 </script>
 
 <template>
-  <header class="sticky top-0 p-4 bg-white border-b border-gray-500 flex justify-between items-center">
-    <h1 class="text-3xl">
-      Vue Shop
-    </h1>
+  <header class="sticky top-0 p-4 bg-white border-b border-gray-500 flex justify-between items-center z-50">
+    <router-link to="/category/">
+      <h1 class="text-3xl">
+        Vue Shop
+      </h1>
+    </router-link>
     <div v-if="!isAuth">
       <login-button>Войти</login-button>
     </div>
