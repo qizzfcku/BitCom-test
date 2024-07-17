@@ -1,14 +1,3 @@
-<template>
-  <input
-      :type="type"
-      :value="modelValue"
-      @input="updateValue"
-      :placeholder="placeholder"
-      class="h-10 px-3 rounded-sm border border-slate-300 outline-blue-500 text-lg hover:border-slate-400"
-      required
-  />
-</template>
-
 <script setup lang="ts">
 import {defineProps, defineEmits } from 'vue';
 
@@ -30,3 +19,15 @@ const updateValue = (event: Event) => {
 };
 
 </script>
+
+<template>
+  <input
+      :type="type"
+      :value="modelValue"
+      @input="updateValue"
+      :placeholder="placeholder"
+      class="h-10 px-3 rounded-sm border border-slate-300 outline-blue-500 text-lg hover:border-slate-400"
+      required
+  />
+</template>
+

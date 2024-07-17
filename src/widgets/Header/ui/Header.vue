@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { computed } from 'vue';
+import {useUserStore} from "@/entities/user/model/store";
+
 import LoginButton from "@/features/Auth/ui/LoginButton.vue";
 import LogoutButton from "@/features/Auth/ui/LogoutButton.vue";
-import {useUserStore} from "@/entities/user/model/store";
+import UserLogin from "@/entities/user/ui/UserLogin.vue";
 
 const userStore = useUserStore();
 
@@ -21,7 +23,7 @@ const isAuth = computed(() => !!userStore.getUserData);
     </div>
     <div v-else>
       <logout-button v-if="user">
-        {{ user.login }}
+        <UserLogin/>
       </logout-button>
     </div>
   </header>

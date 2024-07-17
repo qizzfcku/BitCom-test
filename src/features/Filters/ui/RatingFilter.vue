@@ -1,3 +1,16 @@
+<script setup lang="ts">
+import {ref, watch} from 'vue';
+import {useFiltersStore} from "@/features/Filters/model/store";
+
+const filtersStore = useFiltersStore()
+
+const selectedRating = ref(0);
+
+watch(selectedRating, (newVal) => {
+  filtersStore.setRating(newVal);
+})
+</script>
+
 <template>
   <div class="mt-5">
     <span>Рейтинг товара</span>
@@ -14,18 +27,6 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import {ref, watch} from 'vue';
-import {useFiltersStore} from "@/features/Filters/model/store";
-
-const filtersStore = useFiltersStore()
-
-const selectedRating = ref(0);
-
-watch(selectedRating, (newVal) => {
-  filtersStore.setRating(newVal);
-})
-</script>
-
 <style scoped>
+
 </style>
