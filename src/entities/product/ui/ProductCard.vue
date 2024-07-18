@@ -1,5 +1,5 @@
 <template>
-  <div class="container flex flex-col z-0 hover:scale-105 transition"
+  <div class="container flex flex-col z-0 lg:hover:scale-105 transition"
        @mouseenter="handleMouseEnter"
        @mouseleave="handleMouseLeave">
     <div class="h-3/4 p-5 flex items-center">
@@ -11,7 +11,7 @@
       </div>
       <div class="text-sm flex flex-col gap-1">
         <span>{{ product.title }}</span>
-        <div class="flex justify-between items-center">
+        <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0">
           <div class="flex items-center gap-1" v-if="product.rating.rate">
             <img src="/icon/star.svg" alt="star"/>
             <span>{{ product.rating.rate }}</span>
@@ -19,7 +19,7 @@
           </div>
           <slot />
         </div>
-        <div :class="{'visible': isHovered, 'invisible': !isHovered}">
+        <div :class="{'visible': isHovered, 'Lg:invisible': !isHovered}">
           <span>{{ product.category }}</span>
         </div>
       </div>

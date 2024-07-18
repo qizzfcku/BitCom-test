@@ -33,7 +33,7 @@ const submitForm = () => {
 </script>
 
 <template>
-  <form @submit.prevent="submitForm" class="w-1/4 p-6 rounded-xl border border-slate-300 shadow-blue-glow">
+  <form @submit.prevent="submitForm" class="w-2/3 md:w-1/2 lg:w-1/4 p-6 rounded-xl border border-slate-300 shadow-blue-glow">
     <p class="mb-5 text-slate-700 text-3xl text-center">
       Авторизация
     </p>

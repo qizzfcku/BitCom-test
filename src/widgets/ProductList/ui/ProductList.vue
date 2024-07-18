@@ -8,7 +8,7 @@ const props = defineProps<{ products: Product[] }>();
 </script>
 
 <template>
-  <transition-group name="list" tag="div" class="grid grid-cols-2 lg:grid-cols-4 gap-8 w-full">
+  <transition-group name="list" tag="div" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 lg:gap-8 w-full">
     <ProductCard
         v-for="product in products"
         :key="product.id"

@@ -16,9 +16,9 @@ watch([priceFrom, priceTo], ([newMin, newMax]) => {
   <div class="mt-5">
     <div class="w-full">
       <span>Цена, $</span>
-      <div class="flex justify-between items-center gap-2 w-full mt-2">
-        <input v-model.number="priceFrom" type="number" min="0" placeholder="От" class="h-8 w-1/2 border rounded-lg px-2 py-1 hover:border-slate-400"/>
-        <input v-model.number="priceTo" type="number" min="0" placeholder="До" class="h-8 w-1/2 border rounded-lg px-2 py-1 hover:border-slate-400"/>
+      <div class="flex flex-col lg:flex-row justify-between items-center gap-2 w-full mt-2">
+        <input v-model.number="priceFrom" type="number" min="0" placeholder="От" class="h-8 w-full lg:w-1/2 border rounded-lg px-2 py-1 hover:border-slate-400"/>
+        <input v-model.number="priceTo" type="number" min="0" placeholder="До" class="h-8 w-full lg:w-1/2 border rounded-lg px-2 py-1 hover:border-slate-400"/>
       </div>
     </div>
   </div>

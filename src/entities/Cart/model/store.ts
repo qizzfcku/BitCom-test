@@ -21,6 +21,10 @@ export const useCartStore = defineStore('cart', {
         },
         loadCart() {
             this.cart = JSON.parse(localStorage.getItem('cart') || '[]');
+        },
+        deleteCart() {
+            this.cart = [];
+            this.saveCart();
         }
     },
     getters: {

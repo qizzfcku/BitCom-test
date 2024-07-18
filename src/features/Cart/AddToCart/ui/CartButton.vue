@@ -26,7 +26,7 @@ const onClick = () => {
 
 <template>
   <button
-      @click="onClick" class="px-2 py-1 bg-green-500 text-white rounded-lg hover:scale-110 hover:border-slate-300 transition"
+      @click="onClick" class="px-2 py-1 bg-green-500 text-white rounded-lg lg:hover:scale-110 hover:border-slate-300 transition"
       :class="{'bg-yellow-500 text-white border-0' : inCart}"
   >
     {{ inCart ? 'Перейти в корзину' : 'Добавить' }}
